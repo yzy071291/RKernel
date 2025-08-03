@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RKERNEL</title>
+  <style>
+    /* 全局样式：深色背景 + 字体优化 */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+    body {
+      background-color: #0b0b0e; 
+      color: #fff; 
+      line-height: 1.6; 
+      padding: 20px;
+    }
+    /* 标题样式：渐变文字（模拟原站风格） */
+    .title {
+      font-size: 28px; 
+      font-weight: bold; 
+      background: linear-gradient(90deg, #00c8ff, #00f2ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; 
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 16px; 
+      color: #b3b3b3; 
+      margin-bottom: 30px;
+    }
+    /* 按钮样式：渐变 + 描边 */
+    .btn {
+      padding: 12px 35px; 
+      border-radius: 25px; 
+      border: none; 
+      cursor: pointer; 
+      font-size: 16px; 
+      transition: transform 0.3s ease;
+    }
+    .btn-gradient {
+      background: linear-gradient(90deg, #00a8cc, #0072ff); 
+      color: #fff;
+    }
+    .btn-outline {
+      background: transparent; 
+      border: 2px solid #00c8ff; 
+      color: #00c8ff;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    /* 模块间距 */
+    .section {
+      margin-bottom: 60px;
+    }
+    /* 卡片布局：深蓝色背景 + 圆角 */
+    .card-list {
+      display: flex; 
+      flex-direction: column; 
+      gap: 20px;
+    }
+    .card {
+      background-color: #121217; 
+      padding: 25px; 
+      border-radius: 12px; 
+      color: #ccc;
+    }
+    .card h3 {
+      color: #00c8ff; 
+      margin-bottom: 12px; 
+      font-size: 18px;
+    }
+    /* 图标样式：用SVG或伪元素模拟，这里直接用文字图标占位 */
+    .card::before {
+      content: "🔒"; /* 占位图标，可替换为SVG */
+      font-size: 24px; 
+      color: #00c8ff; 
+      display: block; 
+      margin-bottom: 10px;
+    }
+    .feature-2::before { content: "🔍"; }
+    .feature-3::before { content: "⚡"; }
+    .feature-4::before { content: "🔄"; }
+    .feature-5::before { content: "📊"; }
+    .feature-6::before { content: "🎮"; }
+    /* 版本对比区：表格化布局 */
+    .version-table {
+      display: flex; 
+      flex-direction: column; 
+      gap: 30px;
+    }
+    .version-card {
+      background-color: #121217; 
+      padding: 25px; 
+      border-radius: 12px; 
+      color: #ccc;
+    }
+    .version-card h3 {
+      color: #00c8ff; 
+      margin-bottom: 20px; 
+      font-size: 22px;
+    }
+    .version-feature {
+      display: flex; 
+      align-items: center; 
+      margin-bottom: 8px;
+    }
+    .version-feature::before {
+      content: "✔"; 
+      color: #00c8ff; 
+      margin-right: 8px;
+    }
+    .version-feature.disabled::before {
+      content: "×"; 
+      color: #ff4444;
+    }
+    /* 下载区：卡片式布局 */
+    .download-area {
+      background-color: #121217; 
+      padding: 30px; 
+      border-radius: 12px; 
+      text-align: center;
+    }
+    .version-select {
+      background-color: #1a1a20; 
+      padding: 15px; 
+      border-radius: 8px; 
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 头部区域：LOGO + 标题 + 描述 + 按钮 -->
+  <div class="section" style="text-align: center;">
+    <!-- 替换为实际盾牌图标（建议用SVG） -->
+    <img src="https://cdn-icons-png.flaticon.com/512/66/66173.png" 
+         alt="盾牌图标" 
+         style="width: 60px; margin-bottom: 20px;"> 
+    <div class="title">R_KERNEL</div>
+    <h2 class="title" style="font-size: 32px;">Telegram - @R_Kernel</h2>
+    <p class="subtitle">
+      专为和平精英打造的顶级作弊解决方案，提供前所未有的安全保护层，彻底杜绝拉闸行为。
+</div>
+   <a href="#full-version" class="btn btn-gradient">立即下载</a>
+<a href="#core-features" class="btn btn-outline" style="margin-left: 20px;">了解更多</a>
+  </div>
+
+  <!-- 核心功能区：6个卡片 -->
+  <div class="section">
+   <div class="title" style="text-align: center; margin-bottom: 30px;" id="core-features">核心功能</div>
+    <div class="card-list">
+      <div class="card">
+        <h3>内核级防护</h3>
+        <p>在内核层面运行，提供深层次系统保护，比用户级作弊系统更难以检测。</p>
+      </div>
+      <div class="card feature-2">
+        <h3>智能检测</h3>
+        <p>利用云端驱动的行为分析检测异常，精准识别风险模式，杜绝拉闸。</p>
+      </div>
+      <div class="card feature-3">
+        <h3>轻量高效</h3>
+        <p>优化性能设计，占用资源极少，不影响游戏帧率或系统性能。</p>
+      </div>
+      <div class="card feature-4">
+        <h3>实时更新</h3>
+        <p>自动更新检测规则，对抗最新作弊工具，保持防护始终在线。</p>
+      </div>
+      <div class="card feature-5">
+        <h3>详细报告</h3>
+        <p>提供详细的检测报告，包括日志、系统信息等关键内容。</p>
+      </div>
+      <div class="card feature-6">
+        <h3>多平台支持</h3>
+        <p>支持多种主流系统和平台，轻松集成到现有环境中。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 版本对比区：完整版 + 云端版 -->
+<div 班级=“部分”>分区班级=“部分”>"部分">div 班级="部分">
+<div 班级="标题"样式=文本对齐：中心；底部边缘：30像素；版本对比“标题"样式"文本-排列: 中心; 利润-底部: 30px;“>版本对比</div>
+<div class="版本表"<div class=“版本表”>分区班级<div class="版本表">div 班级="版本表">
+      <!-- 完整版 -->
+<div 班级="版本卡">div 班级="版本卡">
+        <h3>完整版</h3>h3>完整版</h3>
+        <p>提供完整防护和部署方案，适合专业用户使用。</p>p>提供完整防护和部署方案，适合专业用户使用。</p>
+        <div 班级="版本特性">内核实时防护</div>div 班级="版本特性">内核实时防护</div>
+        <div 班级="版本特性">本地行为分析</div>div 班级="版本特性">本地行为分析</div>
+        <div 班级="版本特性">内存保护</div>div 班级="版本特性">内存保护</div>"版本特性">内存保护</div>div 班级="版本特性">内存保护</div>
+        <div 班级="版本特性">驱动防护</div>div 班级="版本特性">驱动防护</div>
+        <div 班级="版本特性">离线模式支持</div>div 班级="版本特性">离线模式支持</div>
+<p 样式="利润—顶端：15p颜色：#999；”>推荐场景：需要完整本地防护的场景</p>p 风格="边缘顶部：15像素；颜色：#999；”>推荐场景：需要完整本地防护的场景</p>
+</div>div>
+</div>div>
+  </div>div>
+
+  <!-- 下载区：版本选择 + 下载按钮 -->
+<div 班级="部分" id="下载部分">div 班级="部分" id="下载部分">
+<div 班级="下载区">div 班级="下载区">
+<div 班级="标题"样式=字体大小：24像素；底部边缘：15像素；下载“标题"样式"font-大小: 24px; 利润-底部: 15px;“>下载RKERNEL</div>
+<p类=“字幕"样式="边缘底部：20像素；“>选择适合您需求的版本并开始下载</p>p 班级="字幕"样式="边距底部:20px；">选择适合您需求的版本并开始下载</p>
+<div 班级=“版本选择”>分区班级=“版本选择”>"版本选择">div 班级="版本选择">
+        <p>选择版本：</p>p>选择版本：</p>
+《按钮类=“边框”样式=“边距：10像素；完整版"》完整版（1.8版）按钮班级="btn btn-大纲"样式="边距:10px；" id="完整版">完整版 (v1.8)</按钮>
+</div>div>
+<div 风格=“margin-bottom:20px；”>分区风格=“边距底部：20像素；”>"margin-bottom:20px；">div 风格="边距底部:20px；">
+>V1.8.嘘下载直接下载按钮 班级="btn btn-梯度"><一种><一种href="C:\使用者\冉昌勇\V想法\Captures\R_Kernel-V1.8.sh"calss=<按钮班级="btn btn-gradien"download>直接下载</一种></按钮>
+按钮类=“边框”样式=“左边距：20像素；">查看文档按钮班级="btn btn-大纲"样式="左边距:20px；">查看文档</按钮>
+</div>div>
+<p 风格="字体大小：14p颜色：#999；">所有下载文件均已数字签名</p>p 风格="字体大小:14px；颜色:#999；">所有下载文件均已数字签名</p>
+</div>div>
+  </div>div>
+
+</身体>身体>
+</html>html>
